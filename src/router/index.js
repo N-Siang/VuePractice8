@@ -9,7 +9,12 @@ import Vue8of7 from '../views/Vue8of7.vue';
 
 const routes = [
     {
-        path: '/',
+        path: '/VuePractice8/',
+        name: Vue8of1,
+        component: Vue8of1
+    },
+    {
+        path: '/Vue8of1',
         name: Vue8of1,
         component: Vue8of1
     },

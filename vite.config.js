@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     host: true
   },
-  base: process.env.NODE_ENV === 'production' ? '/VuePractice8/' : '/',
+  base:'/VuePractice8/' ,
   plugins: [vue()],
   resolve: {
     alias: {

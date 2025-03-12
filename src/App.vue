@@ -1,47 +1,67 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import MainNav from '@/components/MainNav.vue'
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <MainNav />
+    <router-view />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style>
+* {
+    box-sizing: border-box;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+body {
+    margin: 0;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+:root {
+    --fc-border-color: #838383;
+    --fc-button-text-color: #5a5a5a;
+    --fc-button-bg-color: white;
+    --fc-button-border-color: #5a5a5a;
+    --fc-button-hover-bg-color: rgb(208, 208, 208);
+    --fc-button-hover-border-color: #5a5a5a;
+    --fc-button-active-bg-color: rgb(208, 208, 208);
+    --fc-button-active-border-color: #5a5a5a;
+    --fc-today-bg-color: rgb(212, 212, 212);
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+#calendar {
+    max-width:600px;
+    max-height: 560px;
+    margin: auto;
+}
 
-  header .wrapper {
+.fc-event {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
     display: flex;
-    place-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
     flex-wrap: wrap;
-  }
+    position: relative;
+}
+
+.fc-toolbar-chunk {
+    display: flex;
+}
+
+.fc-myCustomButton-button {
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 800;
+    position: absolute;
+    top: 0%;
+    left: 0%;
 }
 </style>
